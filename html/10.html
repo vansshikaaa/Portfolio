@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>personal portfolio</title>
+       
+    </head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #191919;
+    font-family: sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 9;
+    background: #1a1a1a;
+}
+
+.nav-br{
+    height:1000%;
+}
+
+.link-group{
+    list-style: none;
+    display: flex;
+}
+
+.link a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+.home-section.active{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
+}
+.home-section{
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    transition: 1s;
+    opacity: 0 ;
+}
+.hero-heading{
+    color: #fff;
+    font-size: 120px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.home-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+.project-section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 100px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+    
+}
+.project-heading{
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+.project-card{
+    height: 400px;
+    position: relative;
+}
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+                
+}
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+.project-info{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.project-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+}
+.project-card:hover .project-img{
+    filter: blur(20px);
+}
+.project-card:hover .project-content{
+    opacity: 1;
+}
+
+
+</style>
+        
+
+<body> 
+
+    <script src="../javascript/app.js"></script>
+
+    <!-- navbar -->   
+<nav class="navbar">
+    <ul class="link-group">
+        <li class="link active"><a href="#">home</a></li>
+        <li class="link"><a href="#">projects</a></li>
+        <li class="link"><a href="#">about</a></li>
+        <li class="link"><a href="#">contact</a></li>
+    </ul>
+</nav>
+<!-- home section -->
+
+<section class="home-section active">
+    <h1 class="hero-heading">hello, i am <br> Vanshika</h1>
+    <img src="../images/leaf 1.jpg" class="home-img" alt="">
+</section>
+
+ 
+<!-- project section -->
+<section class="project-section">
+    <h1 class="project-heading">some of my projects</h1> 
+    <div class="project-container">
+        <div class="project-card">
+            <img src="../images/leaf 2" class="project-img">
+            <div class="project-content">
+                <h1 class="project-title">project 01</h1>  
+                <p class="project-info">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn github">github repo</button>
+                    <button class="project-btn live">see live</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <h1 class="project-heading">some of my projects</h1> 
+    <div class="project-container">
+        <div class="project-card">
+            <img src="../images/leaf 2" class="project-img">
+            <div class="project-content">
+                <h1 class="project-title">project 01</h1>  
+                <p class="project-info">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn github">github repo</button>
+                    <button class="project-btn live">see live</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="project-card">
+    <img src="../images/leaf 1.jpg" class="project-img">
+    <div class="project-content">
+        <h1 class="project-title">project 02</h1>  
+        <p class="project-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+        </p>
+        <div class="project-btn-grp">
+            <button class="project-btn github">github repo</button>
+            <button class="project-btn live">see live</button>
+        </div>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="../images/leaf 1.jpg" class="project-img">
+    <div class="project-content">
+        <h1 class="project-title">project 03</h1>  
+        <p class="project-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+        </p>
+        <div class="project-btn-grp">
+            <button class="project-btn github">github repo</button>
+            <button class="project-btn live">see live</button>
+        </div>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="../images/leaf 2" class="project-img">
+    <div class="project-content">
+        <h1 class="project-title">project 04</h1>  
+        <p class="project-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit vitae delectus cumque repudiandae aliquam optio accusamus natus nobis! Nam, sunt?
+        </p>
+        <div class="project-btn-grp">
+            <button class="project-btn github">github repo</button>
+            <button class="project-btn live">see live</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
